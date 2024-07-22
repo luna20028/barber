@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Nueva Barbershop - Reserva tu Turno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>La Nueva Barbershop</h1>
+        <p>Reserva tu turno fácilmente</p>
+    </header>
+    <main>
+        <form id="bookingForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="barber">Barbero:</label>
+            <select id="barber" name="barber" required>
+                <option value="Gaston">Gaston</option>
+                <option value="Lean">Lean</option>
+            </select>
+
+            <label for="time">Hora:</label>
+            <select id="time" name="time" required>
+                <!-- Las opciones se llenarán dinámicamente con JavaScript -->
+            </select>
+            
+            <button type="submit">Reservar</button>
+        </form>
+        <h2>Turnos Reservados</h2>
+        <ul id="bookedSlots">
+            <!-- Los turnos reservados se mostrarán aquí -->
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 La Nueva Barbershop. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("TU_USER_ID");
+        })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
